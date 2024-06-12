@@ -1,0 +1,7 @@
+@import url(typograpy-tw.css);
+@import url(kalai-tw.css);
+@import url(habil-tw.css);
+@import url(arya-tw.css);
+@tailwind components;
+@tailwind utilities;
+@tailwind base;

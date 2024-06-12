@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "tailwindcss": "^3.4.3",
+    "tailwindcss-rtl": "^0.9.0"
+  },
+  "scripts": {
+    "dev": "npx tailwindcss -i tailwindcss-input.css -o ../assets/css/main.min.css --watch",
+    "prod": "npx tailwindcss -i tailwindcss-input.css -o ../assets/css/main.min.css --watch --minify"
+  }
+}

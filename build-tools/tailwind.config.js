@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     fontFamily:{
       sans: ['Montserrat', 'sans-serif'],
-      Almarai:['Almarai', 'sans-serif'],
+     
 
     },
     container: {
@@ -74,8 +74,8 @@ module.exports = {
           maxWidth: '100%',
           marginLeft: 'auto',
           marginRight: 'auto',
-          paddingRight: '0.75rem',
-          paddingLeft: '0.75rem',
+          paddingRight: '30px',
+          paddingLeft: '30px',
           overflow:"hidden",
           '@screen xs': {
             maxWidth: '425px',
@@ -95,14 +95,14 @@ module.exports = {
           },
           '@screen 2xl': {
             maxWidth: '1450px',
-            paddingLeft:'20px',
-            paddingRight:'20px'
+            paddingLeft:'25px',
+            paddingRight:'25px'
             
           },
           '@screen 3xl': {
             maxWidth: '1550px',
-            paddingLeft:'25px',
-            paddingRight:'25px',
+            paddingLeft:'30px',
+            paddingRight:'30px',
           },
         }
       })

@@ -3,56 +3,8 @@
 
 @layer base {
 
-     h2,
-     h3,
-     h4,
-     h5,
-     h6 {
-          font-family: 'Tajawal-Medium';
-          font-weight: 500;
-          padding: 0;
-          margin: 0;
-     }
-     h1 {
-          font-family: 'Tajawal-Regular';
-          font-weight: 400;
-          padding: 0;
-          margin: 0;
-     }
-
-     h1{
-          @apply text-[46px] leading-[56px]
-     }
-     h2{
-          @apply text-[36px] leading-[43px]
-     }
-     h3{
-          @apply text-[28px] leading-[33px]
-     }
-     h4{
-          @apply text-2xl
-     }
-     h5{
-          @apply text-xl
-     }
-     h6{
-          @apply text-lg
-     }
-     p, a, span, li{
-          font-family: 'Tajawal-Regular';
-          padding: 0;
-          margin: 0;
-          @apply text-lg pb-0 text-black
-     }
-
-     body{
-          margin: 0;
-          box-sizing: border-box;
-     }
     
 }
 
-.small-text{
-     @apply text-base
-}
+
 

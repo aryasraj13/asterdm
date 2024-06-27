@@ -532,6 +532,10 @@
 /* desktop only */
 
 @media only screen and (min-width: 768px) {
+  .websitefooterlinks ul{
+    min-width: 180px
+  }
+
   .galleryslider img {
     height: 550px;
   }
@@ -748,11 +752,24 @@
 .addvitag {
   position: absolute;
   bottom: 60px;
-  left: 4%;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+.addvitag img, .addvitag svg{
+  margin: auto;
 }
 
 .toggle-icon {
   transition: all .4s ease;
+}
+
+@media only screen and (max-width: 768px) {
+  .offcanvaaddr .herovideooverlay span {
+    min-width: 100px;
+    padding-top: 3px;
+  }
 }
 
 .herovideooverlay{
@@ -775,7 +792,7 @@
 
 .rewampdm p{
   font-family: 'Oxygen-Regular';
-  font-size: 17px;
+  font-size: 18px;
   line-height: 30px;
   letter-spacing: 0.53px;
 }
@@ -811,7 +828,7 @@
 .subhead{
   font-family: 'Oxygen-Bold';
   letter-spacing: 1.35px;
-  font-size: 25px;
+  font-size: 21px;
   margin: 0px;
 }
 
@@ -828,11 +845,21 @@
 
 .heroslidercontrols{
   bottom: 60px;
-  right: 7%;
+  right: 7%
+}
+
+@media only screen and (max-width: 768px) {
+  .offcanvaaddr .heroslidercontrols span {
+    min-width: 100px;
+    padding-top: 3px;
+  }
+}
+
+.heroslidercontrols{
   position: absolute;
   display: flex;
   align-items: center;
-  gap: 1.5rem
+  gap: 1.5rem;
 }
 
 .slidercount {
@@ -928,7 +955,11 @@
      object-fit: contain;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 0.75rem;
+  padding-bottom: 1rem;
+}
+
+.videopopupcont{
+  margin-bottom: 35px;
 }
 
 .eachbranddesc p{
@@ -936,6 +967,13 @@
   font-family: 'Oxygen-Light';
   line-height: 24px;
   min-height: 200px
+}
+
+@media only screen and (max-width: 768px) {
+  .offcanvaaddr .brandlinks span {
+    min-width: 100px;
+    padding-top: 3px;
+  }
 }
 
 .brandlinks{
@@ -946,6 +984,13 @@
   line-height: 21px;
   letter-spacing: 0.35px;
   font-family: 'Oxygen-Light';
+}
+
+@media only screen and (max-width: 768px) {
+  .offcanvaaddr .brandlinks a span,.offcanvaaddr  .brandlinks span span {
+    min-width: 100px;
+    padding-top: 3px;
+  }
 }
 
 .brandlinks a, .brandlinks span{
@@ -971,6 +1016,13 @@
   height:90vh;
 }
 
+@media only screen and (max-width: 768px) {
+  .offcanvaaddr .cardconntaineroverlay span {
+    min-width: 100px;
+    padding-top: 3px;
+  }
+}
+
 .cardconntaineroverlay{
   position: absolute;
   top: 0px;
@@ -992,7 +1044,7 @@
 }
 
 .expertdoctorseclinks, .aw_accordion {
-  border-bottom: 1px solid #164D92;
+  border-bottom: 1px solid #164d924f;
 }
 
 .aw-desc {
@@ -1062,6 +1114,13 @@
   border-radius: 31px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .offcanvaaddr .lifeoverlay span {
+    min-width: 100px;
+    padding-top: 3px;
+  }
 }
 
 .lifeoverlay{
@@ -1283,7 +1342,11 @@ body > img{
 }
 
 .offcanmainmenu li {
-  padding-bottom: 2px;
+  padding-bottom: 5px;
+}
+
+.footercol li {
+  padding-bottom: 5px;
 }
 
 .offcansubmenu a, .offcanvaaddr a{
@@ -1293,6 +1356,11 @@ body > img{
 .offcanmainmenu a:hover{
   font-family: 'Oxygen-Bold';
   color: white;
+}
+
+.websitefooterlinks a:hover{
+  font-family: 'Oxygen-Regular';
+  color: black;
 }
 
 .offcanvaaddr span{
@@ -1340,6 +1408,7 @@ body > img{
   color: black;
   font-family: 'Oxygen-Bold';
   font-size: 16px;
+  padding-bottom: 5px;
 }
 
 .footerlinkhead{
@@ -1491,6 +1560,13 @@ body > img{
   background-color: #e2e7edcc;
 }
 
+@media only screen and (max-width: 768px) {
+  .offcanvaaddr .scrollnextbtn span {
+    min-width: 100px;
+    padding-top: 3px;
+  }
+}
+
 .scrollnextbtn{
   position: absolute;
   left: 0px;
@@ -1504,10 +1580,9 @@ body > img{
   text-align: center;
 }
 
-.siglelifeaster img{
+.siglelifeaster img, .sigleasternew img{
   width: 100%;
   transition: transform 1s ease;
-  /* Adjust the transition duration and easing as needed */
 }
 
 .siglelifeaster a{
@@ -1515,11 +1590,51 @@ body > img{
   border-radius: 31px;
 }
 
-/* Zoom effect on hover */
+.sigleasternew > div{
+  overflow: hidden;
+  border-radius: 20px;
+}
 
-.siglelifeaster a:hover img {
+.rw-sociallinks a {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 100px;
+  transition: transform 1.5s ease;
+}
+
+@keyframes arrow
+    {
+  0% {
+    opacity:0;
+    transform:translateY(1px)
+  }
+
+  80% {
+    opacity:1;
+    transform:translateY(5px)
+  }
+
+  100% {
+    opacity:0;
+    transform:translateY(5px)
+  }
+}
+
+.anim-path {
+  animation: drawLine 2s infinite;
+}
+
+.rw-sociallinks a:hover svg{
   transform: scale(1.1);
-  /* Adjust the scale value as needed */
+}
+
+.siglelifeaster a:hover img, .sigleasternew:hover img {
+  transform: scale(1.5);
+}
+
+.siglelifeaster .sliderspacing a >div{
+  width: 100%;
 }
 
 .brandlinks span{
@@ -1574,6 +1689,18 @@ footer {
   border-radius: 20px;
 }
 
+.ourbrandsec .subhead{
+  padding-bottom: 18px;
+}
+
+.ourbranddiv{
+  margin-top: 35px;
+}
+
+.expertdoctorsec .subhead, .hwawards .subhead{
+  padding-bottom: 15px;
+}
+
 /* mobile only */
 
 @media only screen and (max-width: 768px) {
@@ -1586,6 +1713,12 @@ footer {
     font-family: 'Oxygen-Light';
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .menuexitarrow{
+    transform: rotate(180deg);
+    display: flex;
+    justify-content: end;
   }
 
   .astercount {
@@ -1751,7 +1884,7 @@ footer {
   }
 
   .footerlinkhead {
-    padding-bottom: 0px;
+    padding-bottom: 10px;
   }
 
   .footercol{
@@ -1858,7 +1991,7 @@ footer {
   }
 
   .offcansubmenu {
-    padding-top: 25px;
+    padding-top: 0px;
     padding-left: 5px;
     border-left: unset;
   }
@@ -1874,6 +2007,20 @@ footer {
     line-height: 1.5rem;
     font-weight: 300;
     line-height: 1;
+  }
+
+  .offcanvaaddr {
+    margin-top: 20px;
+  }
+
+  .offcanvaaddr .flex span {
+    min-width: 100px;
+    padding-top: 3px;
+  }
+
+  .offcanvaaddr >div {
+    align-items: self-start;
+    padding-bottom: 6px;
   }
 }
 
@@ -1991,12 +2138,12 @@ footer {
   width: 150px;
 }
 
-.w-\[200px\]{
-  width: 200px;
+.w-\[195px\]{
+  width: 195px;
 }
 
-.w-\[210px\]{
-  width: 210px;
+.w-\[200px\]{
+  width: 200px;
 }
 
 .w-\[230px\]{
@@ -2362,10 +2509,6 @@ footer {
   padding-top: 0.5rem;
 }
 
-.pt-3{
-  padding-top: 0.75rem;
-}
-
 .pt-4{
   padding-top: 1rem;
 }
@@ -2505,6 +2648,28 @@ footer {
 }
 
 @media not all and (min-width: 768px){
+  .max-md\:flex{
+    display: flex;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .offcanvaaddr .max-md\:flex span {
+      min-width: 100px;
+      padding-top: 3px;
+    }
+  }
+}
+
+@media (min-width: 768px){
+  @media only screen and (max-width: 768px) {
+    .offcanvaaddr .md\:flex span {
+      min-width: 100px;
+      padding-top: 3px;
+    }
+  }
+}
+
+@media not all and (min-width: 768px){
   .max-md\:relative{
     position: relative;
   }
@@ -2594,6 +2759,11 @@ footer {
     padding-right: 0.75rem;
   }
 
+  .max-md\:py-1{
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
   .max-md\:py-11{
     padding-top: 2.75rem;
     padding-bottom: 2.75rem;
@@ -2613,8 +2783,16 @@ footer {
     padding-bottom: 0.25rem;
   }
 
+  .max-md\:pb-4{
+    padding-bottom: 1rem;
+  }
+
   .max-md\:pb-6{
     padding-bottom: 1.5rem;
+  }
+
+  .max-md\:pt-3{
+    padding-top: 0.75rem;
   }
 
   .max-md\:text-center{
@@ -2721,8 +2899,8 @@ footer {
     width: 200px;
   }
 
-  .md\:w-\[355px\]{
-    width: 355px;
+  .md\:w-\[300px\]{
+    width: 300px;
   }
 
   .md\:w-\[40\%\]{
@@ -2769,8 +2947,8 @@ footer {
     gap: 4rem;
   }
 
-  .md\:gap-28{
-    gap: 7rem;
+  .md\:gap-20{
+    gap: 5rem;
   }
 
   .md\:gap-4{
@@ -2860,6 +3038,10 @@ footer {
 
   .md\:pb-5{
     padding-bottom: 1.25rem;
+  }
+
+  .md\:pb-6{
+    padding-bottom: 1.5rem;
   }
 
   .md\:pr-20{

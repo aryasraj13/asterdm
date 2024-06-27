@@ -188,7 +188,7 @@ $(document).ready(function () {
     });
     $('.asternewsslider').slick({
         infinite: false,
-        slidesToShow: 5.7,
+        slidesToShow: 4.7,
         slidesToScroll: 2,
         // autoplay: true,
         // autoplaySpeed: 3000,
@@ -200,12 +200,12 @@ $(document).ready(function () {
             {
                 breakpoint: 2500,
                 settings: {
-                    slidesToShow: 4.7,
+                    slidesToShow: 3.7,
                     slidesToScroll: 1,
                 }
             },
             {
-                breakpoint: 1700,
+                breakpoint: 2000,
                 settings: {
                     slidesToShow: 2.7,
                     slidesToScroll: 1,
@@ -316,6 +316,7 @@ $(document).ready(function () {
     $('#offcanvasOverlay, .offcanvasclose').on('click', function () {
         $('#offcanvasSidebar').removeClass('open');
         $('#offcanvasOverlay').toggleClass('show');
+        $('.offcansubmenu').css('left', '500px');
         $(this).removeClass('show');
     });
 
@@ -365,6 +366,13 @@ $(document).ready(function () {
             event.preventDefault(); // Prevent the default action of the link
             $(this).find('.offcansubmenu').css('left', '0px');
         });
+        $('.menuexitarrow').click(function(event) {
+            console.log("test")
+            event.preventDefault(); // Prevent the default action of the link
+            $('.offcansubmenu').css('left', '500px');
+            // $(this).closest('.offcansubmenu').css('left', '500px');
+        });
+
     }
    
 

@@ -441,6 +441,9 @@
     }
     /* desktop only */
     @media only screen and (min-width: 768px) {
+        .websitefooterlinks ul{
+            min-width: 180px
+        }
         .galleryslider img {
             height: 550px;
         }
@@ -644,7 +647,12 @@
      .addvitag {
         position: absolute;
         bottom: 60px;
-        left: 4%;
+        left: 0;
+        right: 0;
+        display: flex;
+    }
+    .addvitag img, .addvitag svg{
+        margin: auto;
     }
      .toggle-icon {
         transition: all .4s ease; 
@@ -660,7 +668,7 @@
     }
     .rewampdm p{
         font-family: 'Oxygen-Regular';
-        font-size: 17px;
+        font-size: 18px;
         line-height: 30px;
         letter-spacing: 0.53px;
     }
@@ -691,7 +699,7 @@
     .subhead{
         font-family: 'Oxygen-Bold';
         letter-spacing: 1.35px;
-        font-size: 25px;
+        font-size: 21px;
         margin: 0px;
     }
     .abold{
@@ -771,7 +779,10 @@
     .eachbranddesc img{
         height: 60px;
     object-fit: contain;
-        @apply mx-auto pb-3;
+        @apply mx-auto pb-4;
+    }
+    .videopopupcont{
+        margin-bottom: 35px;
     }
     .eachbranddesc p{
         font-size: 16px;
@@ -816,7 +827,7 @@
         line-height: 55px;
     }
     .expertdoctorseclinks, .aw_accordion {
-        border-bottom: 1px solid #164D92;
+        border-bottom: 1px solid #164d924f;
     }
     .aw-desc {
         display: none;
@@ -1026,7 +1037,10 @@
         display: block;
     }
     .offcanmainmenu li {
-        padding-bottom: 2px;
+        padding-bottom: 5px;
+    }
+    .footercol li {
+        padding-bottom: 5px;
     }
     .offcansubmenu a, .offcanvaaddr a{
         font-family: 'Oxygen-Light';
@@ -1034,6 +1048,10 @@
     .offcanmainmenu a:hover{
         font-family: 'Oxygen-Bold';
         color: white;
+    }
+    .websitefooterlinks a:hover{
+        font-family: 'Oxygen-Regular';
+        color: black;
     }
     .offcanvaaddr span{
         font-family: 'Oxygen-Bold';
@@ -1074,6 +1092,7 @@
         color: black;
         font-family: 'Oxygen-Bold';
         font-size: 16px;
+        padding-bottom: 5px;
     }
     .footerlinkhead{
         padding-bottom: 15px;
@@ -1198,16 +1217,41 @@
     .scrollnextbtn{
         @apply text-center flex flex-col justify-center items-center absolute left-0 right-0 bottom-7 cursor-pointer;
     }
-    .siglelifeaster img {
+    .siglelifeaster img, .sigleasternew img {
         @apply w-full;
-        transition: transform 1s ease; /* Adjust the transition duration and easing as needed */
+        transition: transform 1s ease; 
     }
     .siglelifeaster a{
        @apply overflow-hidden rounded-30
     }
-    /* Zoom effect on hover */
-    .siglelifeaster a:hover img {
-        transform: scale(1.1); /* Adjust the scale value as needed */
+    .sigleasternew > div{
+        @apply overflow-hidden rounded-20
+     }
+     .rw-sociallinks a {
+        width: 45px;
+        height: 45px;
+        overflow: hidden;
+        border-radius: 100px;
+        transition: transform 1.5s ease; 
+    }
+    @keyframes arrow
+    {
+    0% {opacity:0; transform:translateY(1px)}
+    80% {opacity:1; transform:translateY(5px)}
+    100% {opacity:0; transform:translateY(5px)}
+    }
+    
+    .anim-path {
+        animation: drawLine 2s infinite;
+    }
+    .rw-sociallinks a:hover svg{
+        transform: scale(1.1); 
+    }
+    .siglelifeaster a:hover img, .sigleasternew:hover img {
+        transform: scale(1.5); 
+    }
+    .siglelifeaster .sliderspacing a >div{
+        width: 100%;
     }
     .brandlinks span{
         @apply text-black
@@ -1251,6 +1295,15 @@
         margin: 20px 0px 0px;
         border-radius: 20px;
     }
+    .ourbrandsec .subhead{
+        padding-bottom: 18px;
+    }
+    .ourbranddiv{
+        margin-top: 35px;
+    }
+    .expertdoctorsec .subhead, .hwawards .subhead{
+        padding-bottom: 15px;
+    }
       /* mobile only */
      @media only screen and (max-width: 768px) {
         .heading1 {
@@ -1261,7 +1314,12 @@
             font-family: 'Oxygen-Light';
             font-size: 16px;
             line-height: 24px;
-        }   
+        }
+        .menuexitarrow{
+            transform: rotate(180deg);
+            display: flex;
+            justify-content: end;
+        } 
         .astercount {
             padding: 0px;
             font-size: 32px;
@@ -1394,7 +1452,7 @@
             font-size: 14px;
         }
         .footerlinkhead {
-            padding-bottom: 0px;
+            padding-bottom: 10px;
         }
         .footercol{
             flex:1 1 40%;
@@ -1477,7 +1535,7 @@
             padding: 10px;
         }
         .offcansubmenu {
-            padding-top: 25px;
+            padding-top: 0px;
             padding-left: 5px;
             border-left: unset;
         }
@@ -1493,6 +1551,18 @@
             font-weight: 300;
             line-height: 1;
         }
+        .offcanvaaddr {
+            margin-top: 20px;
+        }
+        .offcanvaaddr .flex span {
+            min-width: 100px;
+            padding-top: 3px;
+        }
+        .offcanvaaddr >div {
+            align-items: self-start;
+            padding-bottom: 6px;
+        }
+        
 
       }
 }

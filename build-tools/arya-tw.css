@@ -85,7 +85,7 @@
     .faces-promo__img {
         color: inherit;
         display: block;
-        transition: all .5s ease;
+        transition: all .8s ease;
         will-change: transform, top, left
     }
     
@@ -422,7 +422,7 @@
             left: calc(50% - 740px)
         }
         [data-active='6'] .faces-promo__img:nth-child(5) {
-            left: calc(0% - 740px)
+            left: calc(40% - 740px)
         }
     }
 
@@ -441,6 +441,9 @@
     }
     /* desktop only */
     @media only screen and (min-width: 768px) {
+        .sigleasternew img {
+            height: 340px;
+        }
         .websitefooterlinks ul{
             min-width: 180px
         }
@@ -911,8 +914,13 @@
         font-size: 16px;
         font-family: 'Oxygen-Regular';
     }
-    
-    .galleryslidercontroldesktop{
+    .an_nnewswidth{
+        z-index: 1;
+    }
+    .asternewscontroldesktop div{
+        z-index: 2;
+    }
+    .galleryslidercontroldesktop, .brandslidercontroldesktop div, .lifeaterslidercontroldesktop div{
         z-index: 1;
     }
 
@@ -1248,7 +1256,7 @@
         transform: scale(1.1); 
     }
     .siglelifeaster a:hover img, .sigleasternew:hover img {
-        transform: scale(1.5); 
+        transform: scale(1.2); 
     }
     .siglelifeaster .sliderspacing a >div{
         width: 100%;
@@ -1261,7 +1269,11 @@
     padding-right: 15px;
     }
     .asterdate{
-        @apply text-black
+        @apply text-black;
+        font-family: 'Oxygen-Regular';
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.53px;
     }
     
     .brandlinks a:last-of-type {
@@ -1310,7 +1322,7 @@
             font-size: 42px;
             line-height: 48px;
         }  
-        .rewampdm p {
+        .rewampdm p, .asterdate {
             font-family: 'Oxygen-Light';
             font-size: 16px;
             line-height: 24px;

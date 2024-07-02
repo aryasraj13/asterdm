@@ -97,7 +97,11 @@ $(document).ready(function () {
         prevArrow: $('.hero-left'),
         nextArrow: $('.hero-right')
     });
-
+    $(".scrollicon").click(function() {
+        $('html, body').animate({
+           scrollTop: $(".astercounts").offset().top
+        }, 1000); 
+     });
     $('.ourbrandslider').slick({
         infinite: false,
         slidesToShow: 5.8,
@@ -316,7 +320,9 @@ $(document).ready(function () {
     $('#offcanvasOverlay, .offcanvasclose').on('click', function () {
         $('#offcanvasSidebar').removeClass('open');
         $('#offcanvasOverlay').toggleClass('show');
+        if (isMobile) {
         $('.offcansubmenu').css('left', '500px');
+        }
         $(this).removeClass('show');
     });
 
@@ -547,6 +553,9 @@ const setCursorLocation = e => {
 
 document.addEventListener("mousemove", setCursorLocation);
 
+
+// gallery Slider Start
+
 const pre_services = document.querySelector('.galleryslidercontroldesktop .galleryslider-left');
 const next_services = document.querySelector('.galleryslidercontroldesktop .galleryslider-right');
 
@@ -586,3 +595,140 @@ if( pre_services ){
   }
 pre_services && pre_services.addEventListener("mouseleave", () => cursor.classList.remove("pre-services"));
 next_services && next_services.addEventListener("mouseleave", () => cursor.classList.remove("next_services"));
+
+// gallery Slider End
+
+// Brand Slider Start
+
+const pre_brand = document.querySelector('.brandslidercontroldesktop .brand-left');
+const next_brand = document.querySelector('.brandslidercontroldesktop .brand-right');
+
+
+$('.brandslidercontroldesktop .brand-left').click(function () {
+  if (pre_brand.classList.contains('slick-disabled')) {
+    cursor.classList.remove("pre-services");
+  }
+});
+
+$('.brandslidercontroldesktop .brand-right').click(function () {
+  if (next_brand.classList.contains('slick-disabled')) {
+    cursor.classList.remove("next_services");
+  }
+});
+
+if( pre_brand ){
+    pre_brand.addEventListener("mouseenter", function () {
+      if (!pre_brand.classList.contains('slick-disabled')) {
+        cursor.classList.add("pre-services");
+      }
+      else {
+        cursor.classList.remove("pre-services");
+      }
+    });
+  }
+  
+  if( next_brand ){
+    next_brand.addEventListener("mouseenter", function () {
+      if (!next_brand.classList.contains('slick-disabled')) {
+        cursor.classList.add("next_services");
+      }
+      else {
+        cursor.classList.remove("next_services");
+      }
+    });
+  }
+pre_brand && pre_brand.addEventListener("mouseleave", () => cursor.classList.remove("pre-services"));
+next_brand && next_brand.addEventListener("mouseleave", () => cursor.classList.remove("next_services"));
+
+// Brand Slider End
+
+
+
+// lifeataster Slider Start
+
+const pre_lifeataster = document.querySelector('.lifeaterslidercontroldesktop .lifeataster-left');
+const next_lifeataster = document.querySelector('.lifeaterslidercontroldesktop .lifeataster-right');
+
+
+$('.lifeaterslidercontroldesktop .lifeataster-left').click(function () {
+  if (pre_lifeataster.classList.contains('slick-disabled')) {
+    cursor.classList.remove("pre-services");
+  }
+});
+
+$('.lifeaterslidercontroldesktop .lifeataster-right').click(function () {
+  if (next_lifeataster.classList.contains('slick-disabled')) {
+    cursor.classList.remove("next_services");
+  }
+});
+
+if( pre_lifeataster ){
+    pre_lifeataster.addEventListener("mouseenter", function () {
+      if (!pre_lifeataster.classList.contains('slick-disabled')) {
+        cursor.classList.add("pre-services");
+      }
+      else {
+        cursor.classList.remove("pre-services");
+      }
+    });
+  }
+  
+  if( next_lifeataster ){
+    next_lifeataster.addEventListener("mouseenter", function () {
+      if (!next_lifeataster.classList.contains('slick-disabled')) {
+        cursor.classList.add("next_services");
+      }
+      else {
+        cursor.classList.remove("next_services");
+      }
+    });
+  }
+  pre_lifeataster && pre_lifeataster.addEventListener("mouseleave", () => cursor.classList.remove("pre-services"));
+next_lifeataster && next_lifeataster.addEventListener("mouseleave", () => cursor.classList.remove("next_services"));
+
+// lifeataster Slider End
+
+
+// Aster News Slider Start
+
+const pre_asternews = document.querySelector('.asternewscontroldesktop .an-left');
+const next_asternews = document.querySelector('.asternewscontroldesktop .an-right');
+
+
+$('.asternewscontroldesktop .an-left').click(function () {
+  if (pre_asternews.classList.contains('slick-disabled')) {
+    cursor.classList.remove("pre-services");
+  }
+});
+
+$('.asternewscontroldesktop .an-right').click(function () {
+  if (next_asternews.classList.contains('slick-disabled')) {
+    cursor.classList.remove("next_services");
+  }
+});
+
+if( pre_asternews ){
+    pre_asternews.addEventListener("mouseenter", function () {
+      if (!pre_asternews.classList.contains('slick-disabled')) {
+        cursor.classList.add("pre-services");
+      }
+      else {
+        cursor.classList.remove("pre-services");
+      }
+    });
+  }
+  
+  if( next_asternews ){
+    next_asternews.addEventListener("mouseenter", function () {
+      if (!next_asternews.classList.contains('slick-disabled')) {
+        cursor.classList.add("next_services");
+      }
+      else {
+        cursor.classList.remove("next_services");
+      }
+    });
+  }
+  pre_asternews && pre_asternews.addEventListener("mouseleave", () => cursor.classList.remove("pre-services"));
+  next_asternews && next_asternews.addEventListener("mouseleave", () => cursor.classList.remove("next_services"));
+
+// Aster News Slider End

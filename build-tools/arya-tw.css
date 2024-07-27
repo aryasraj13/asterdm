@@ -55,6 +55,9 @@
     .ft-16{
         font-size: 16px;
     }
+    a{
+        text-decoration: none;
+    }
     /* section zoom effect start */
     .faces-promo {
         --faces-promo-offset: -100px;
@@ -454,8 +457,8 @@
             cursor: none;
         }
         .getbox{
-            width: 340px;
-            height: 280px;
+            width: 300px;
+            height: 240px;
         }
         .subbox.footerbox {
             width: 650px;
@@ -636,7 +639,10 @@
             padding-top: 295px;
         }
     }
-    
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: .5rem;
+    }
 /*     
     .faces-promo__cta .button[href^='//']:hover:after,
     .faces-promo__cta .button[href^='http://']:hover:after,
@@ -682,14 +688,13 @@
         line-height: 80px;
     }
     .heading2{
-        font-family: 'Oxygen-Regular';
+        font-family: 'Oxygen-Light';
         letter-spacing: 0px;
         font-size: 48px;
         line-height: 65px;
     }
     .heading3{
-        font-family: 'Oxygen-Regular';
-        letter-spacing: 0px;
+        font-family: 'Oxygen-Light';
         font-size: 44px;
         line-height: 55px;
     }
@@ -1004,7 +1009,7 @@
         cursor: default;
     }
     .menucloseopen{
-        @apply md:min-w-[100px];
+        @apply md:min-w-[80px];
     }
     .socialsoffacvas svg {
         border: 1px solid white;

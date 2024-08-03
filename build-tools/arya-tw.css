@@ -58,6 +58,9 @@
     .ft-18{
         font-size: 18px;
     }
+    .ft-21{
+        font-size: 21px;
+    }
     a{
         text-decoration: none;
     }
@@ -445,6 +448,10 @@
         border-radius: 27px;
         object-fit: cover;
     }
+    .overview-sec-desc{
+        letter-spacing: 1.05px;
+        line-height: 36px;
+    }
     /* desktop only */
     @media only screen and (min-width: 768px) {
         .sigleasternew img {
@@ -706,12 +713,23 @@
     .heading2{
         font-family: 'Oxygen-Light';
         letter-spacing: 0px;
-        font-size: 48px;
+        font-size: 52px;
         line-height: 65px;
+    }
+    .heading21{
+        font-family: 'Oxygen-Light';
+        letter-spacing: 0px;
+        font-size: 46px;
+        line-height: 72px;
     }
     .heading3{
         font-family: 'Oxygen-Light';
         font-size: 44px;
+        line-height: 55px;
+    }
+    .heading4{
+        font-family: 'Oxygen-Light';
+        font-size: 40px;
         line-height: 55px;
     }
     .headingitalic{
@@ -719,6 +737,12 @@
         letter-spacing: 0.8px;
         font-size: 32px;
         line-height: 40px;
+    }
+    .subheadmain{
+        font-family: 'Oxygen-Bold';
+        letter-spacing: 1.35px;
+        font-size: 27px;
+        margin: 0px;
     }
     .subhead{
         font-family: 'Oxygen-Bold';
@@ -753,7 +777,11 @@
         @apply absolute flex items-center gap-6
         
     }
-
+    .asterpopup-btn {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
     .slidercount {
         font-family: 'Nunito';
         font-size: 21px;
@@ -794,7 +822,27 @@
         @apply pt-5 m-0
     }
     .eachbranddesc{
-        @apply bg-white rounded-[27px] relative bottom-[45px] py-6 px-5
+        @apply bg-white rounded-[27px] relative bottom-[45px] py-6 px-5;
+    }
+    .eachnolives-head {
+        @apply m-0;
+        font-size: 20px;
+        font-family: 'PlayfairDisplay-Italic';
+    }
+
+    .eachnolives .eachnolives-desc {
+        @apply m-0 min-h-[40px];
+        line-height: 20px;
+        font-size: 14px;
+    }
+    .eachnolives-count{
+        font-family: 'Oxygen-Bold';
+        font-size: 52px;
+        @apply text-primary_color_2 m-0 py-3
+    }
+    .eachnolives {
+        border: 1px solid #164D92;
+        @apply md:w-[19%] rounded-30 py-11 px-8;
     }
     .rw-eachbrandimg img{
         @apply rounded-[27px];

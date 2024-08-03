@@ -942,6 +942,20 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 32px;
 }
 
+.aster-btn{
+  font-size: 14px;
+  font-family: 'Oxygen-Regular';
+  border-radius: 31px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 77 146 / var(--tw-bg-opacity));
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .opencoperate{
   border: 1px solid white;
 }
@@ -975,6 +989,19 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Nunito';
   font-size: 21px;
   font-weight: 300;
+}
+
+.imt-enrollment p a{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.rewampdm ul,  .imt-enrollment p{
+  font-size: 16px;
+  font-family: 'Oxygen-Regular';
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  margin-bottom: 25px;
 }
 
 .singleheroslide video{
@@ -2307,6 +2334,10 @@ footer {
   margin-bottom: 2.25rem;
 }
 
+.mb-20{
+  margin-bottom: 5rem;
+}
+
 .mb-24{
   margin-bottom: 6rem;
 }
@@ -2548,6 +2579,10 @@ footer {
   gap: 2.5rem;
 }
 
+.gap-16{
+  gap: 4rem;
+}
+
 .gap-2{
   gap: 0.5rem;
 }
@@ -2574,10 +2609,6 @@ footer {
 
 .gap-8{
   gap: 2rem;
-}
-
-.gap-16{
-  gap: 4rem;
 }
 
 .rounded-10{
@@ -2794,6 +2825,10 @@ footer {
 
 .pb-1{
   padding-bottom: 0.25rem;
+}
+
+.pb-10{
+  padding-bottom: 2.5rem;
 }
 
 .pb-16{

@@ -768,6 +768,11 @@
         font-size: 16px;
         line-height: 32px;
     }
+    .aster-btn{
+        font-size: 14px;
+        font-family: 'Oxygen-Regular';
+        @apply bg-primary_color_1 rounded-30 text-white px-8 py-3;
+    }
     .opencoperate{
         border: 1px solid white;
     }
@@ -786,6 +791,17 @@
         font-family: 'Nunito';
         font-size: 21px;
         font-weight: 300;
+    }
+    .imt-enrollment p a{
+        @apply text-black;
+    }
+    .rewampdm ul,  .imt-enrollment p{
+        font-size: 16px;
+        font-family: 'Oxygen-Regular';
+        line-height: 24px;
+    letter-spacing: 0.4px;
+    margin-bottom: 25px;
+
     }
 
     .singleheroslide video{

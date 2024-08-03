@@ -541,6 +541,55 @@ $(document).ready(function () {
                 once: true
             });
         });
+        $('.eachcountry').on('click', function() {
+            var mainTabId = $(this).attr('data-maintabid');
+            
+            $('.eachcenterlistbycountry').hide();
+            
+            var $targetMainTab = $('.eachcenterlistbycountry[targetmaintab="' + mainTabId + '"]');
+            $targetMainTab.show();
+            
+            $('.eachcountry').removeClass('active');
+            $(this).addClass('active');
+    
+            $targetMainTab.find('.eachcenterlist').first().trigger('click');
+        });
+        
+        $('.eachcenterlist').on('click', function() {
+            
+            var subTabId = $(this).attr('data-subtabid');
+           
+            $('.eachcenterlist-details').hide();
+         
+            $('.eachcenterlist-details[targetsubtab="' + subTabId + '"]').show();
+           
+            $('.eachcenterlist').removeClass('active');
+            $(this).addClass('active');
+        });
+        
+       
+        $('.eachcountry').first().trigger('click');
+
+        
+        var searchInput = $('.gcc-locsearch input[type="text"]'); 
+
+        searchInput.on('keyup', function() {
+            var searchTerm = $(this).val().toLowerCase(); 
+            var locAddressList = $(this).closest('.gcc-locsearch').next('.loc-addresslist'); 
+            var locations = locAddressList.find('.eachloc-address'); 
+    
+            locations.hide(); 
+    
+            locations.each(function() {
+                var locationText = $(this).find('.cliniclocation').text().toLowerCase(); 
+                if (locationText.indexOf(searchTerm) !== -1) {
+                    $(this).show(); 
+                }
+            });
+        });
+          
+
+
 });
 
 const cursor = document.querySelector('.cursor');

@@ -55,6 +55,9 @@
     .ft-16{
         font-size: 16px;
     }
+    .ft-18{
+        font-size: 18px;
+    }
     a{
         text-decoration: none;
     }
@@ -495,7 +498,20 @@
             transition: all .5s ease;
         }
     }  
+    .eachcountry{
+        border: 1px solid #164D92;
     
+    }
+    .eachcountry:hover, .eachcountry.active{
+        @apply bg-primary_color_1
+    }
+    .eachcountry:hover .eachcountry-text, .eachcountry.active .eachcountry-text{
+        @apply text-white;
+    }
+    .eachcountry-text{
+        @apply text-primary_color_1 m-0;
+    }
+
     .faces-promo__img-body {
         @apply bg-primary_color_1 rounded-20 text-white ;
         padding: 10px 15px;
@@ -710,6 +726,18 @@
         font-size: 21px;
         margin: 0px;
     }
+    .subhead2{
+        font-family: 'Oxygen-Bold';
+        letter-spacing: 0.45px;
+        font-size: 18px;
+        margin: 0px;
+    }
+    .subhead3{
+        font-family: 'Oxygen-Bold';
+        letter-spacing: 0.4px;
+        font-size: 16px;
+        margin: 0px;
+    }
     .abold{
         font-family: 'Oxygen-Bold';
         letter-spacing: 0.8px;
@@ -915,7 +943,7 @@
     .rw-header {
         @apply absolute w-full z-10;
     }
-    .rw-menu span {
+    .rw-menu span,   .eachcenterlist h6 {
         font-size: 16px;
         font-family: 'Oxygen-Regular';
     }
@@ -927,6 +955,45 @@
     }
     .galleryslidercontroldesktop, .brandslidercontroldesktop div, .lifeaterslidercontroldesktop div{
         z-index: 1;
+    }
+    .centerslist{
+        border: 1px solid #00B48D80;
+    }
+    .eachcenterlist{
+        border-bottom: 1px solid #E0E6EA80;
+    }
+    .eachcenterlist:hover h6{
+        background-color: #E0E6EA;
+    }
+    .eachcenterlist.active h6{
+        background-color: #E0E6EA;
+    }
+    .eachcenterlist h6{
+
+        @apply m-0 py-4 px-8 rounded-10;
+    }
+    .centerlistdesc p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .add-bookappt{
+        background-color: #E8EFEA;
+        border-radius: 17px;
+        font-size: 14px;
+        letter-spacing: 0.35px;
+
+    }
+    .gcc-locsearch input{
+        padding: 15px;
+        border: 1px solid #164D9250;
+        width: -webkit-fill-available;
+    }
+    .eachloc-address{
+        border-bottom: 1px solid #E0E6EA80;
+        @apply pt-4 pb-6;
+    }
+    .ec-list-meta{
+        border-right: 2px solid #E0E6EA;
     }
 
     /* new css */
@@ -1321,6 +1388,14 @@
     .expertdoctorsec .subhead, .hwawards .subhead{
         padding-bottom: 15px;
     }
+    .breadcrumbs a{
+        font-size: 16px;
+        font-family: 'Oxygen-Regular';
+        @apply text-lightblack ;
+    }
+    /* .innerpagetop-sp{
+        margin-top: 80px;
+    } */
       /* mobile only */
      @media only screen and (max-width: 768px) {
         .heading1 {

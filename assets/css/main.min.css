@@ -180,6 +180,12 @@
 }
 
 @font-face {
+  font-family: 'PlayfairDisplay-Medium';
+
+  src: url('../fonts/PlayfairDisplay-Medium.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'Nunito';
 
   src: url('../fonts/Nunito-VariableFont_wght.ttf') format('truetype');
@@ -885,7 +891,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Oxygen-Light';
   letter-spacing: 0px;
   font-size: 46px;
-  line-height: 72px;
+  line-height: 60px;
 }
 
 .heading3{
@@ -1179,6 +1185,98 @@ h1, h2, h3, h4, h5, h6 {
 
 .brandlsidercontrol{
   right: 7%;
+}
+
+.sidebar-popup {
+  border-radius: 40px 0px 0px 40px;
+  position: fixed;
+  top: 90px;
+  padding: 50px;
+  right: -100%;
+  width: 51vw;
+  z-index: 1;
+  background-color: white;
+  transition: right 0.3s ease;
+}
+
+.sidebar-popup-content {
+  padding: 20px;
+}
+
+.contact-desc a{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.contact-desc p{
+  margin: 0px;
+  font-size: 16px;
+}
+
+.formfields span{
+  font-size: 14px;
+  font-family: 'Oxygen-Light';
+  padding-bottom: 1rem;
+}
+
+@media not all and (min-width: 768px){
+  .formfields span{
+    padding-bottom: 0.5rem;
+  }
+}
+
+.eachcountry{
+  border-radius: 18px 18px 9px 9px;
+}
+
+@media not all and (min-width: 768px){
+  .formfields input[type="text"], .formfields input[type="email"], .formfields select, .formfields input[type="tel"], .formfields textarea{
+    width: 100%;
+  }
+}
+
+.formfields input[type="text"], .formfields input[type="email"], .formfields select, .formfields input[type="tel"], .formfields textarea {
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid #70707060;
+}
+
+input:focus-visible, select:focus-visible, textarea{
+  outline: unset;
+}
+
+.contact-us > div{
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px){
+  .contact-us > div{
+    margin-bottom: 3rem;
+  }
+}
+
+.sidebar-popup.show {
+  right: 0;
+}
+
+#sidebar-popup-close {
+  padding: 10px;
+  cursor: pointer;
+  text-align: end;
+}
+
+.sidebar-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.sidebar-popup.show ~ .sidebar-popup-overlay {
+  display: block;
 }
 
 .ourpromise .bgcontainercarddiv{
@@ -1909,10 +2007,43 @@ footer {
 }
 
 .subbox p {
-  font-family: 'OXYGEN-LIGHT';
+  font-family: 'Oxygen-Light';
   color: #0A203B;
   font-size: 14px;
   padding-top: 10px;
+}
+
+.leadership-meta h6{
+  font-size: 15px;
+}
+
+.each-leadershipcard span{
+  font-size: 14px;
+}
+
+.leadershipcontrol{
+  border-left: 1px solid #164D9250;
+  padding-inline-start: 1.25rem
+}
+
+.leadership-meta h6, .each-leadershipcard span{
+  font-family: 'Oxygen-Light';
+  margin: 0px;
+}
+
+.leadership-img{
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.each-leadershipcard {
+  width: 32%;
+}
+
+.leadership-meta {
+  border-radius: 0px 0px 15px 15px;
 }
 
 .lifeatastercontrol svg, .galleryslidercontrol svg{
@@ -1941,10 +2072,28 @@ footer {
 }
 
 .breadcrumbs a{
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Oxygen-Regular';
   --tw-text-opacity: 1;
   color: rgb(10 32 59 / var(--tw-text-opacity));
+}
+
+.leadership-meta {
+  background-color: #F0F0F0;
+}
+
+.leadership-meta h5 {
+  margin-bottom: 5px;
+  letter-spacing: 0.44px;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: 'PlayfairDisplay-Regular';
+}
+
+.pagedesc-sec .pagemaindesc, .likepage-desc p{
+  font-family: 'Oxygen-Light';
+  font-size: 16px;
+  line-height: 26px;
 }
 
 /* .innerpagetop-sp{
@@ -1954,6 +2103,10 @@ footer {
 /* mobile only */
 
 @media only screen and (max-width: 768px) {
+  .eachcountry-text{
+    font-size: 14px;
+  }
+
   .heading1 {
     font-size: 42px;
     line-height: 48px;
@@ -2302,6 +2455,10 @@ footer {
   top: 0px;
 }
 
+.isolate{
+  isolation: isolate;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -2334,6 +2491,10 @@ footer {
   margin-bottom: 2.25rem;
 }
 
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
 .mb-20{
   margin-bottom: 5rem;
 }
@@ -2358,6 +2519,10 @@ footer {
   margin-top: 0.25rem;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
 .mt-12{
   margin-top: 3rem;
 }
@@ -2370,12 +2535,24 @@ footer {
   margin-top: 0.5rem;
 }
 
+.mt-20{
+  margin-top: 5rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
 .mt-5{
   margin-top: 1.25rem;
 }
 
 .mt-6{
   margin-top: 1.5rem;
+}
+
+.mt-7{
+  margin-top: 1.75rem;
 }
 
 .inline{
@@ -2388,6 +2565,10 @@ footer {
 
 .hidden{
   display: none;
+}
+
+.h-\[10px\]{
+  height: 10px;
 }
 
 .h-\[340px\]{
@@ -2404,6 +2585,10 @@ footer {
 
 .h-\[45px\]{
   height: 45px;
+}
+
+.h-\[465px\]{
+  height: 465px;
 }
 
 .h-\[540px\]{
@@ -2493,6 +2678,10 @@ footer {
 
 .max-w-\[1200px\]{
   max-width: 1200px;
+}
+
+.max-w-\[170px\]{
+  max-width: 170px;
 }
 
 .max-w-\[190px\]{
@@ -2639,6 +2828,15 @@ footer {
   border-bottom-right-radius: 20px;
 }
 
+.border-none{
+  border-style: none;
+}
+
+.bg-\[\#E0E6EA\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 230 234 / var(--tw-bg-opacity));
+}
+
 .bg-darkblue{
   --tw-bg-opacity: 1;
   background-color: rgb(96 121 148 / var(--tw-bg-opacity));
@@ -2716,8 +2914,16 @@ footer {
   padding: 3.5rem;
 }
 
+.p-20{
+  padding: 5rem;
+}
+
 .p-3{
   padding: 0.75rem;
+}
+
+.p-6{
+  padding: 1.5rem;
 }
 
 .p-9{
@@ -2789,6 +2995,11 @@ footer {
   padding-bottom: 0.5rem;
 }
 
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -2817,6 +3028,10 @@ footer {
 .py-9{
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
+}
+
+.\!pb-0{
+  padding-bottom: 0px !important;
 }
 
 .pb-0{
@@ -2893,6 +3108,10 @@ footer {
 
 .pt-12{
   padding-top: 3rem;
+}
+
+.pt-14{
+  padding-top: 3.5rem;
 }
 
 .pt-16{
@@ -3313,6 +3532,10 @@ footer {
     width: 120%;
   }
 
+  .md\:w-\[1200px\]{
+    width: 1200px;
+  }
+
   .md\:w-\[140\%\]{
     width: 140%;
   }
@@ -3349,6 +3572,10 @@ footer {
     width: 100%;
   }
 
+  .md\:min-w-\[400px\]{
+    min-width: 400px;
+  }
+
   .md\:min-w-\[420px\]{
     min-width: 420px;
   }
@@ -3383,6 +3610,10 @@ footer {
 
   .md\:gap-4{
     gap: 1rem;
+  }
+
+  .md\:gap-52{
+    gap: 13rem;
   }
 
   .md\:gap-6{

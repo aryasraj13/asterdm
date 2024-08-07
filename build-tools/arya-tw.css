@@ -459,6 +459,9 @@
     }
     /* desktop only */
     @media only screen and (min-width: 768px) {
+        .ec-list-meta{
+            border-right: 2px solid #E0E6EA;
+        }
         .sigleasternew img {
             height: 340px;
         }
@@ -1105,7 +1108,7 @@
     }
     .eachcenterlist h6{
 
-        @apply m-0 py-4 px-8 rounded-10;
+        @apply m-0 py-3 px-4 md:py-4 md:px-8 rounded-10;
     }
     .centerlistdesc p{
         font-size: 16px;
@@ -1127,9 +1130,7 @@
         border-bottom: 1px solid #E0E6EA80;
         @apply pt-4 pb-6;
     }
-    .ec-list-meta{
-        border-right: 2px solid #E0E6EA;
-    }
+
 
     /* new css */
    
@@ -1574,6 +1575,28 @@
     } */
       /* mobile only */
      @media only screen and (max-width: 768px) {
+        .eachcenterlist h6 {
+            font-size: 14px;
+        }
+        .pagedesc-sec .pagemaindesc, .likepage-desc p {
+            font-family: 'Oxygen-Light';
+            font-size: 14px;
+            line-height: 24px;
+        }
+        /* .eachcenterlist:not(:first-child) {
+            display: none !important;
+        } */
+        .heading21{
+            font-size: 27px;
+            line-height: 36px;
+        }
+        main .countrylocfilter .eachcountry {
+            display: flex;
+            margin-inline-end: 10px;
+        }
+        .eachcountry-text{
+            font-family: 'Oxygen-Light';
+        }
         .eachcountry-text{
             font-size: 14px;
         }

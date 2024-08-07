@@ -189,7 +189,7 @@ $(document).ready(function () {
     $('.tabcountry').slick({
         mobileFirst:true,
         infinite: false,
-        slidesToShow: 1.5,
+        slidesToShow: 1.9,
         slidesToScroll: 1,
         // autoplay: true,
         // autoplaySpeed: 3000,
@@ -327,6 +327,14 @@ $(document).ready(function () {
             }
         ]
     });
+
+
+        if ($(window).width() <= 768) {
+            $('.eachcenterlist:first-child').click(function() {
+                $('.eachcenterlist:not(:first-child)').slideToggle();
+                $(this).find('.dropdown-arrow').toggleClass('rotated');
+            });
+        }
 
 
     $('.aw-title').on('click', function () {

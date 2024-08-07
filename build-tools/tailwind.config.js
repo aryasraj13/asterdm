@@ -120,18 +120,23 @@ module.exports = {
           width: '100%',
           marginLeft: 'auto',
           marginRight: 'auto',
-          paddingRight: '18px',
-          paddingLeft: '18px',
+          paddingRight: '25px',
+          paddingLeft: '25px',
+          boxSizing: 'border-box',
           '@screen 2xl': {
             maxWidth: '1450px',
             paddingLeft:'100px',
-            paddingRight:'100px'
+            paddingRight:'100px',
+            paddingRight: '18px',
+            paddingLeft: '18px',
             
           },
           '@screen 3xl': {
             maxWidth: '1480px',
             paddingLeft:'100px',
             paddingRight:'100px',
+            paddingRight: '18px',
+            paddingLeft: '18px',
           },
         },
       })
